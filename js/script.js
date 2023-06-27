@@ -11,6 +11,7 @@ const list = document.getElementById('list');
 //Axios 
 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 .then(res => {
-    console.log(res.data.response);
-    list.innerText = res.data.response;
+    const li = document.createElement('li');
+    li.innerText = res.data.response;
+    list.appendChild(li);
 });
