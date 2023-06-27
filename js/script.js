@@ -6,8 +6,11 @@ console.log('JS OK')
 console.log('Vue OK', Vue);
 */
 
-//Axios RESET
+const list = document.getElementById('list');
+
+//Axios 
 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 .then(res => {
     console.log(res.data.response);
-})
+    list.innerText = res.data.response;
+});
